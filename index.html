@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h1 id="main-heading">Rock Paper Scissors</h1>
+
+    <div class="setup">
+      <input type="text" id="player1Name" placeholder="Enter Player 1 Name" />
+      <input type="text" id="player2Name" placeholder="Enter Player 2 Name" />
+      <input type="number" id="roundsInput" placeholder="No. of Rounds" min="1"/>
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div class="game-area hidden">
+      <p id="roundStatus">Round 1</p>
+
+      <div class="choice">
+        <p id="p1Label">Player 1</p>
+        <img class="img1" src="images/rock_bg.png" alt="Player 1 Choice">
+      </div>
+
+      <div class="choice">
+        <p id="p2Label">Player 2</p>
+        <img class="img2" src="images/paper_bg.png" alt="Player 2 Choice">
+      </div>
+      <div class="play-btn-wrapper"></div>
+      <button onclick="playGame()">Play Round</button>
+      </div>
+      <div class="scores">
+        <p id="scoreDisplay">Score: 0 - 0</p>
+      </div>
+    </div>
+  </div>
+  <div class="instructions">
+    <h2>How to Play</h2>
+    <ul>
+      <li>Enter Player 1 and Player 2 names.</li>
+      <li>Select how many rounds you want to play.</li>
+      <li>Click "Start Game" to begin.</li>
+      <li>Click "Play Round" to simulate choices for both players.</li>
+      <li>Each round updates the score based on who wins.</li>
+      <li>After all rounds, the final winner will be announced with flair!</li>
+    </ul>
+  </div>
+  <div id="final-winner" class="final-winner"></div>
+  
+  
+
+  <footer>
+    <p>© 2025 Rock Paper Scissors Game. All rights reserved.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
